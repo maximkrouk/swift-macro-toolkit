@@ -14,7 +14,7 @@ jobs:
     - name: Force Xcode 15.0
       run: sudo xcode-select -switch /Applications/Xcode_15.0.app
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v7
     - name: Test
       run: swift test
   check-macro-compatibility:
@@ -22,7 +22,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Run Swift Macro Compatibility Check
         uses: Matejkob/swift-macro-compatibility-check@v1
         with:
